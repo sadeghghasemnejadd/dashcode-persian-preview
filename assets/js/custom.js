@@ -71,6 +71,7 @@
     slidesToScroll: 1,
     asNavFor: ".layoutPreview",
     focusOnSelect: true,
+    rtl: true,
     prevArrow:
       '<iconify-icon class="prev" icon="line-md:arrow-left"></iconify-icon>',
     nextArrow:
@@ -106,14 +107,15 @@
     slidesToScroll: 1,
     arrows: false,
     fade: true,
+    rtl: true,
     asNavFor: ".layoutSlider",
   });
 
-//   $("#scroller").simplyScroll({
-//     speed: 5,
-//     frameRate: 20,
-//     pauseOnHover: false
-//   });
+  //   $("#scroller").simplyScroll({
+  //     speed: 5,
+  //     frameRate: 20,
+  //     pauseOnHover: false
+  //   });
 
   // Accordion
   $(".acc__title").click(function (j) {
@@ -136,16 +138,19 @@
     event.preventDefault();
     let email = $("#newsletterEmail").val();
     (async () => {
-      const rawResponse = await fetch('https://codeshaper.net/api/newsletter-subscription', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'https://codeshaper.net'
-        },
-        body: JSON.stringify({email: email})
-      });
+      const rawResponse = await fetch(
+        "https://codeshaper.net/api/newsletter-subscription",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "https://codeshaper.net",
+          },
+          body: JSON.stringify({ email: email }),
+        }
+      );
       // const content = await rawResponse.json();
-    })()
+    })();
   });
 })(jQuery);
