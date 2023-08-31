@@ -736,7 +736,7 @@ body {
 .section-heading {
   margin-left: auto;
   margin-right: auto;
-  max-width: 48rem;
+  max-width: 60rem;
   text-align: center;
 }
 
@@ -809,10 +809,6 @@ body {
   padding: 0px;
 }
 
-.navbar-nav li {
-  display: inline-block;
-}
-
 .navbar-nav li a {
   position: relative;
   margin-left: 1rem;
@@ -823,6 +819,7 @@ body {
   line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  text-align: right !important;
 }
 
 .navbar-nav li a::before {
